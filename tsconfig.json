@@ -32,7 +32,8 @@
     // 声明文件路径
     "declarationDir": "./dist",
     // 此处设置为node,才能解析import xx from 'xx'
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
   },
   // 入口文件
   "include": ["src"],
