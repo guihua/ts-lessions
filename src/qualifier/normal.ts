@@ -1,5 +1,5 @@
 // 普通装饰器
-interface Person {
+interface Person2 {
   name: string;
   age: string;
 }
@@ -10,6 +10,6 @@ function enhancer(target: any) {
 }
 
 @enhancer // 普通装饰器
-class Person {
+class Person2 {
   constructor() {}
 }

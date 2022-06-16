@@ -26,7 +26,7 @@ class Point {
 interface PointInstanceType {
   x: number;
   y: number;
-  printPoint(): void;
+  printPoint: () => void;
 }
 
 const p1: Point = new Point(1, 2);

@@ -7,13 +7,13 @@ interface Person {
   age: string;
 }
 
-function enhancer(target: any) {
+function classEnhancer(target: any) {
   target.xx = 'Person'; // 给类增加属性
   target.prototype.name = '金色小芝麻';
   target.prototype.age = '18';
 }
 
-@enhancer // 名字随便起
+@classEnhancer // 名字随便起
 class Person {
   constructor() {}
 }

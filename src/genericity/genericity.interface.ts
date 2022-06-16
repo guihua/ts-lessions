@@ -8,16 +8,18 @@ interface CreateArrayFunc<T> {
 }
 
 // 使用泛型接口的时候，需要定义泛型的类型。
-let createArray: CreateArrayFunc<string>;
-
-createArray = function<T>(length: number, value: T): Array<T> {
+const createInterfaceArray: CreateArrayFunc<string> = function <T>(
+  length: number,
+  value: T,
+): Array<T> {
   const result: T[] = [];
 
   for (let i = 0; i < length; i++) {
-      result[i] = value;
+    result[i] = value;
   }
-  return result;
-}
 
-const result = createArray(3, 'x');
-console.log(result)// ['x', 'x', 'x']
+  return result;
+};
+
+const result = createInterfaceArray(3, 'x');
+console.log(result); // ['x', 'x', 'x']

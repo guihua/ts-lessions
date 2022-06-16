@@ -4,7 +4,6 @@
 const obj: any = {};
 
 function attr(val: number): void;
-// eslint-disable-next-line @typescript-eslint/unified-signatures
 function attr(val: string): void;
 function attr(val: any): void {
   if (typeof val === 'string') {
@@ -16,4 +15,6 @@ function attr(val: any): void {
 
 attr('123'); // YES
 attr(10); // YES
-attr(true); // ERROR
+
+// ERROR
+// attr(true);

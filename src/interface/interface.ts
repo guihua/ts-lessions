@@ -1,10 +1,10 @@
 interface Alarm {
-  alert(): void;
+  alert: () => void;
 }
 
 interface Light {
-  lightOn(): void;
-  lightOff(): void;
+  lightOn: () => void;
+  lightOff: () => void;
 }
 
 class Car implements Alarm, Light {
@@ -18,3 +18,9 @@ class Car implements Alarm, Light {
     console.log('Car light off');
   }
 }
+
+const car = new Car();
+
+car.alert();
+car.lightOn();
+car.lightOff();
